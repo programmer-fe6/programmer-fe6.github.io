@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      localStorage.setItem('user', JSON.stringify({
-        _id: 'ini-user-id'
-      }));
-    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,12 +8,23 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T54G3XLN');</script>
     <!-- End Google Tag Manager -->
+    <script>
+      localStorage.setItem('user', JSON.stringify({
+        _id: 'ini-user-id'
+      }));
+
+      function login() {
+        const user = JSON.parse(localStorage.getItem('user') ?? '{}');
+        
+        window.dataLayer.push({ 'user_id': user._id });
+      }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T54G3XLN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    Hello World
+    <button onClick="login">Login</button>
   </body>
 </html>

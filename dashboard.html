@@ -7,6 +7,11 @@
     <!-- End Google Tag Manager -->
     <script src="scripts/guard.js"></script>
     <script src="scripts/auth.js"></script>
+    <script>
+      const handleBtn = (action) => {
+        dataLayer.push({ event: "button_click", action });
+      };
+    </script>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
@@ -25,6 +30,11 @@
       <div class="card">
         <span>Ini Dashboard</span>
         <button onclick="logout()">Logout</button>
+      </div>
+      <div>
+        <button onclick="handleBtn('Button A')">Button A</button>
+        <button onclick="handleBtn('Button B')">Button B</button>
+        <button onclick="handleBtn('Button C')">Button C</button>
       </div>
       <a href="/settings">Settings</a>
     </main>

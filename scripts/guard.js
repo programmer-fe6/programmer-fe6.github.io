@@ -2,7 +2,7 @@ try {
   const user = JSON.parse(localStorage.getItem("user") ?? "{}");
 
   if (user._id) {
-    dataLayer.push({ user_id: user._id });
+    dataLayer.push({ event: "userData", user_id: user._id });
   } else {
     throw new Error("Invalid User ID!");
   }

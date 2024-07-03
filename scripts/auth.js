@@ -8,7 +8,7 @@ const login = () => {
     })
   );
 
-  dataLayer.push({ event: "login", user_id: username.value });
+  window.dataLayer.push({ event: "login", user_id: username.value });
 
   /**
    * Land to /dashboard after login.

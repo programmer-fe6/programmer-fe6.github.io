@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Google Analytics Dummy</title>
+    <title>Google Analytics Dummy - Dashboard</title>
     <!-- Google Tag Manager -->
     <script src="scripts/gtm.js"></script>
     <!-- End Google Tag Manager -->
+    <script src="scripts/guard.js"></script>
     <script src="scripts/auth.js"></script>
     <link rel="stylesheet" href="main.css" />
   </head>
@@ -22,13 +23,10 @@
     <!-- End Google Tag Manager (noscript) -->
     <main>
       <div class="card">
-        <span class="card-title">Login Dummy</span>
-        <div class="input-field">
-          <label for="username">Username:</label>
-          <input id="username" type="text" />
-          <button onclick="login()">Login</button>
-        </div>
+        <span>Ini Dashboard</span>
+        <button onclick="logout()">Logout</button>
       </div>
+      <a href="/settings.html">Settings</a>
     </main>
   </body>
 </html>

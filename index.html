@@ -10,7 +10,7 @@
     <!-- End Google Tag Manager -->
     <script>
       localStorage.setItem('user', JSON.stringify({
-        _id: (new Date()).toString()
+        _id: Date.parse(new Date())
       }));
 
       function login() {
